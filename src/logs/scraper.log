@@ -1,0 +1,127 @@
+2025-06-25 19:29:48 - github_scraper - WARNING - No GitHub token provided - rate limits may apply
+2025-06-25 19:29:48 - github_scraper - ERROR - Error during scraping: 'GitHubScraper' object has no attribute 'scrape_user_complete'
+2025-06-25 19:30:18 - github_scraper - INFO - GitHub token provided - higher rate limits available
+2025-06-25 19:30:18 - github_scraper - ERROR - Error during scraping: 'GitHubScraper' object has no attribute 'scrape_user_complete'
+2025-06-25 19:40:09 - github_scraper - INFO - GitHub token provided - higher rate limits available
+2025-06-25 19:40:09 - github_scraper - INFO - Starting complete scrape for user: Ojjoj
+2025-06-25 19:40:09 - github_scraper - INFO - Fetching profile information for user: Ojjoj
+2025-06-25 19:40:10 - github_scraper - INFO - Found README: README.md in Ojjoj (3726 characters)
+2025-06-25 19:40:10 - github_scraper - INFO - Found profile README for user: Ojjoj
+2025-06-25 19:40:10 - github_scraper - INFO - Successfully fetched profile for: Ojjoj
+2025-06-25 19:40:10 - github_scraper - INFO - Fetching repositories for user: Ojjoj
+2025-06-25 19:40:11 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/readme.md
+2025-06-25 19:40:12 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.rst
+2025-06-25 19:40:12 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.txt
+2025-06-25 19:40:12 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README
+2025-06-25 19:40:13 - github_scraper - INFO - Found README: README.md in Ojjoj (3726 characters)
+2025-06-25 19:40:14 - github_scraper - INFO - Found README: README.md in glamora (856 characters)
+2025-06-25 19:40:15 - github_scraper - INFO - Found README: README.md in personal-website (856 characters)
+2025-06-25 19:40:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/readme.md
+2025-06-25 19:40:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.rst
+2025-06-25 19:40:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.txt
+2025-06-25 19:40:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README
+2025-06-25 19:40:17 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.md
+2025-06-25 19:40:18 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/readme.md
+2025-06-25 19:40:18 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.rst
+2025-06-25 19:40:18 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.txt
+2025-06-25 19:40:19 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README
+2025-06-25 19:40:19 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.md
+2025-06-25 19:40:20 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/readme.md
+2025-06-25 19:40:20 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.rst
+2025-06-25 19:40:20 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.txt
+2025-06-25 19:40:20 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README
+2025-06-25 19:40:21 - github_scraper - INFO - Found README: README.md in Codeforces-Wizard (1163 characters)
+2025-06-25 19:40:22 - github_scraper - INFO - Found README: README.md in School-System (106 characters)
+2025-06-25 19:40:23 - github_scraper - INFO - Successfully fetched 9 repositories for: Ojjoj
+2025-06-25 19:40:23 - github_scraper - INFO - Results saved to: C:\Users\pc\Desktop\Programming\Programming\Python\Projects\github-profile-readme-generator\src\output\Ojjoj_profile_20250625_194023.json
+2025-06-25 19:40:23 - github_scraper - INFO - Complete scrape finished for: Ojjoj
+2025-06-25 19:40:23 - github_scraper - INFO - Summary: 9 repos, 5 with README, 7 languages, 0 total stars
+2025-06-25 19:42:10 - github_scraper - INFO - GitHub token provided - higher rate limits available
+2025-06-25 19:42:10 - github_scraper - INFO - Starting complete scrape for user: AliiAssi
+2025-06-25 19:42:10 - github_scraper - INFO - Fetching profile information for user: AliiAssi
+2025-06-25 19:42:11 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.md
+2025-06-25 19:42:11 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/readme.md
+2025-06-25 19:42:12 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.rst
+2025-06-25 19:42:12 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.txt
+2025-06-25 19:42:12 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README
+2025-06-25 19:42:12 - github_scraper - INFO - Successfully fetched profile for: AliiAssi
+2025-06-25 19:42:12 - github_scraper - INFO - Fetching repositories for user: AliiAssi
+2025-06-25 19:42:13 - github_scraper - INFO - Found README: README.md in arabic-ai-question-generator (7264 characters)
+2025-06-25 19:42:14 - github_scraper - INFO - Found README: README.md in mern-stack-learning (4298 characters)
+2025-06-25 19:42:15 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.md
+2025-06-25 19:42:15 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/readme.md
+2025-06-25 19:42:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.rst
+2025-06-25 19:42:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.txt
+2025-06-25 19:42:16 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README
+2025-06-25 19:42:17 - github_scraper - INFO - Found README: README.md in restaurant-management-system (2774 characters)
+2025-06-25 19:42:17 - github_scraper - INFO - Found README: README.md in laravel-blog (1872 characters)
+2025-06-25 19:42:18 - github_scraper - INFO - Found README: README.md in maze-solver (1917 characters)
+2025-06-25 19:42:19 - github_scraper - INFO - Found README: README.md in laravel-rest (1810 characters)
+2025-06-25 19:42:20 - github_scraper - INFO - Found README: README.md in laravel-recipe-sharing-platform (2614 characters)
+2025-06-25 19:42:20 - github_scraper - INFO - Found README: README.md in techlarious (3647 characters)
+2025-06-25 19:42:21 - github_scraper - INFO - Found README: README.md in etl-database-project (1777 characters)
+2025-06-25 19:42:22 - github_scraper - INFO - Found README: README.md in polyclinic-management-system (3104 characters)
+2025-06-25 19:42:23 - github_scraper - INFO - Found README: README.md in react-learning-projects (2503 characters)
+2025-06-25 19:42:24 - github_scraper - INFO - Found README: README.md in java-restaurant-system (1238 characters)
+2025-06-25 19:42:24 - github_scraper - INFO - Found README: README.md in school-management-system (5009 characters)
+2025-06-25 19:42:25 - github_scraper - INFO - Found README: README.md in automated-eda-platform (2000 characters)
+2025-06-25 19:42:26 - github_scraper - INFO - Found README: README.md in wartime-fake-news-children-analysis (1821 characters)
+2025-06-25 19:42:27 - github_scraper - INFO - Found README: README.md in rag-chatbot-project (1757 characters)
+2025-06-25 19:42:27 - github_scraper - INFO - Found README: README.md in cosmetics-system-ai-integration (1459 characters)
+2025-06-25 19:42:28 - github_scraper - INFO - Found README: README.md in ai-engineers-program (2045 characters)
+2025-06-25 19:42:29 - github_scraper - INFO - Found README: README.md in n-queens-ai-visualization (952 characters)
+2025-06-25 19:42:29 - github_scraper - INFO - Found README: README.md in powerbi-ecommerce-dashboard (832 characters)
+2025-06-25 19:42:30 - github_scraper - INFO - Found README: README.md in langgraph-practice (1335 characters)
+2025-06-25 19:42:31 - github_scraper - INFO - Found README: README.md in multimodal-gaming-assistant (10217 characters)
+2025-06-25 19:42:32 - github_scraper - INFO - Successfully fetched 23 repositories for: AliiAssi
+2025-06-25 19:42:32 - github_scraper - INFO - Results saved to: C:\Users\pc\Desktop\Programming\Programming\Python\Projects\github-profile-readme-generator\src\output\AliiAssi_profile_20250625_194232.json
+2025-06-25 19:42:32 - github_scraper - INFO - Complete scrape finished for: AliiAssi
+2025-06-25 19:42:32 - github_scraper - INFO - Summary: 23 repos, 22 with README, 12 languages, 0 total stars
+2025-06-25 23:32:55 - github_scraper - INFO - GitHub token provided - higher rate limits available
+2025-06-25 23:32:55 - github_scraper - INFO - Starting complete scrape for user: AliiAssi
+2025-06-25 23:32:55 - github_scraper - INFO - Fetching profile information for user: AliiAssi
+2025-06-25 23:32:56 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.md
+2025-06-25 23:32:57 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/readme.md
+2025-06-25 23:32:57 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.rst
+2025-06-25 23:32:57 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README.txt
+2025-06-25 23:32:57 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/AliiAssi/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/AliiAssi/contents/README
+2025-06-25 23:32:57 - github_scraper - INFO - Successfully fetched profile for: AliiAssi
+2025-06-25 23:32:57 - github_scraper - INFO - Fetching repositories for user: AliiAssi
+2025-06-25 23:32:59 - github_scraper - INFO - Found README: README.md in arabic-ai-question-generator (7264 characters)
+2025-06-25 23:32:59 - github_scraper - INFO - Found README: README.md in mern-stack-learning (4298 characters)
+2025-06-25 23:33:00 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/README.md
+2025-06-25 23:33:00 - github_scraper - ERROR - API request failed for https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/AliiAssi/pro-readme-ai/contents/readme.md
+2025-06-25 23:33:22 - github_scraper - INFO - GitHub token provided - higher rate limits available
+2025-06-25 23:33:22 - github_scraper - INFO - Starting complete scrape for user: Ojjoj
+2025-06-25 23:33:22 - github_scraper - INFO - Fetching profile information for user: Ojjoj
+2025-06-25 23:33:23 - github_scraper - INFO - Found README: README.md in Ojjoj (3726 characters)
+2025-06-25 23:33:23 - github_scraper - INFO - Found profile README for user: Ojjoj
+2025-06-25 23:33:23 - github_scraper - INFO - Successfully fetched profile for: Ojjoj
+2025-06-25 23:33:23 - github_scraper - INFO - Fetching repositories for user: Ojjoj
+2025-06-25 23:33:24 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/readme.md
+2025-06-25 23:33:24 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.rst
+2025-06-25 23:33:25 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README.txt
+2025-06-25 23:33:25 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/github-profile-readme-generator/contents/README
+2025-06-25 23:33:25 - github_scraper - INFO - Found README: README.md in Ojjoj (3726 characters)
+2025-06-25 23:33:26 - github_scraper - INFO - Found README: README.md in glamora (856 characters)
+2025-06-25 23:33:27 - github_scraper - INFO - Found README: README.md in personal-website (856 characters)
+2025-06-25 23:33:28 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/readme.md
+2025-06-25 23:33:28 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.rst
+2025-06-25 23:33:28 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README.txt
+2025-06-25 23:33:28 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Ball-Ninja/contents/README
+2025-06-25 23:33:29 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.md
+2025-06-25 23:33:29 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/readme.md
+2025-06-25 23:33:30 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.rst
+2025-06-25 23:33:30 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README.txt
+2025-06-25 23:33:30 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/30-Days-Of-React/contents/README
+2025-06-25 23:33:31 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.md
+2025-06-25 23:33:31 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/readme.md: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/readme.md
+2025-06-25 23:33:32 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.rst: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.rst
+2025-06-25 23:33:32 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.txt: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README.txt
+2025-06-25 23:33:32 - github_scraper - ERROR - API request failed for https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README: 404 Client Error: Not Found for url: https://api.github.com/repos/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework/contents/README
+2025-06-25 23:33:33 - github_scraper - INFO - Found README: README.md in Codeforces-Wizard (1163 characters)
+2025-06-25 23:33:34 - github_scraper - INFO - Found README: README.md in School-System (106 characters)
+2025-06-25 23:33:34 - github_scraper - INFO - Successfully fetched 9 repositories for: Ojjoj
+2025-06-25 23:33:34 - github_scraper - INFO - Results saved to: C:\Users\pc\Desktop\Programming\Programming\Python\Projects\github-profile-readme-generator\src\output\Ojjoj_profile_20250625_233334.json
+2025-06-25 23:33:34 - github_scraper - INFO - Complete scrape finished for: Ojjoj
+2025-06-25 23:33:34 - github_scraper - INFO - Summary: 9 repos, 5 with README, 7 languages, 0 total stars

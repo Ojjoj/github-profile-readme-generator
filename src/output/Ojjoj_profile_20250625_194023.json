@@ -1,0 +1,184 @@
+{
+  "profile": {
+    "name": "Karam Kassem",
+    "bio": "Hey I am Karam , a Computer Scientist and web developer !",
+    "company": null,
+    "website": "",
+    "twitter": null,
+    "location": "Lebanon",
+    "email": null,
+    "public_repos": 9,
+    "followers": 3,
+    "following": 4,
+    "profile_readme": "<h1 align=\"center\">Hi 👋, I'm Karam</h1>\n<h3 align=\"center\">A Computer Science developer from Lebanon</h3>\n\n- 👨‍💻 All of my projects are available at [Coming Soon ...](Coming Soon ...)\n\n- 📫 How to reach me **karam.ahmadkassem@gmail.com**\n\n<h3 align=\"left\">Connect with me:</h3>\n<p align=\"left\">\n</p>\n\n<h3 align=\"left\">Languages and Tools:</h3>\n<p align=\"left\"> <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://cdn.worldvectorlogo.com/logos/arduino-1.svg\" alt=\"arduino\" width=\"40\" height=\"40\"/> </a> <a href=\"https://getbootstrap.com\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg\" alt=\"bootstrap\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.w3schools.com/css/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg\" alt=\"css3\" width=\"40\" height=\"40\"/> </a> <a href=\"https://git-scm.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg\" alt=\"git\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.w3.org/html/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg\" alt=\"html5\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.linux.org/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg\" alt=\"linux\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.mongodb.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg\" alt=\"mongodb\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.mysql.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg\" alt=\"mysql\" width=\"40\" height=\"40\"/> </a> <a href=\"https://nodejs.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg\" alt=\"nodejs\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.postgresql.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg\" alt=\"postgresql\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.python.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg\" alt=\"python\" width=\"40\" height=\"40\"/> </a> <a href=\"https://pytorch.org/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg\" alt=\"pytorch\" width=\"40\" height=\"40\"/> </a> <a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg\" alt=\"react\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.selenium.dev\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg\" alt=\"selenium\" width=\"40\" height=\"40\"/> </a> <a href=\"https://tailwindcss.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg\" alt=\"tailwind\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.tensorflow.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg\" alt=\"tensorflow\" width=\"40\" height=\"40\"/> </a> </p>\n",
+    "avatar_url": "https://avatars.githubusercontent.com/u/44134401?v=4",
+    "login": "Ojjoj"
+  },
+  "repositories": [
+    {
+      "name": "github-profile-readme-generator",
+      "about": "This project helps in creating the profile README file for GitHub pages.",
+      "description": "This project helps in creating the profile README file for GitHub pages.",
+      "readme_content": null,
+      "languages": {
+        "Python": 109
+      },
+      "url": "https://github.com/Ojjoj/github-profile-readme-generator",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "Ojjoj",
+      "about": "My personal repository",
+      "description": "My personal repository",
+      "readme_content": "<h1 align=\"center\">Hi 👋, I'm Karam</h1>\n<h3 align=\"center\">A Computer Science developer from Lebanon</h3>\n\n- 👨‍💻 All of my projects are available at [Coming Soon ...](Coming Soon ...)\n\n- 📫 How to reach me **karam.ahmadkassem@gmail.com**\n\n<h3 align=\"left\">Connect with me:</h3>\n<p align=\"left\">\n</p>\n\n<h3 align=\"left\">Languages and Tools:</h3>\n<p align=\"left\"> <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://cdn.worldvectorlogo.com/logos/arduino-1.svg\" alt=\"arduino\" width=\"40\" height=\"40\"/> </a> <a href=\"https://getbootstrap.com\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg\" alt=\"bootstrap\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.w3schools.com/css/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg\" alt=\"css3\" width=\"40\" height=\"40\"/> </a> <a href=\"https://git-scm.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg\" alt=\"git\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.w3.org/html/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg\" alt=\"html5\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.linux.org/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg\" alt=\"linux\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.mongodb.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg\" alt=\"mongodb\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.mysql.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg\" alt=\"mysql\" width=\"40\" height=\"40\"/> </a> <a href=\"https://nodejs.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg\" alt=\"nodejs\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.postgresql.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg\" alt=\"postgresql\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.python.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg\" alt=\"python\" width=\"40\" height=\"40\"/> </a> <a href=\"https://pytorch.org/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg\" alt=\"pytorch\" width=\"40\" height=\"40\"/> </a> <a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg\" alt=\"react\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.selenium.dev\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg\" alt=\"selenium\" width=\"40\" height=\"40\"/> </a> <a href=\"https://tailwindcss.com/\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg\" alt=\"tailwind\" width=\"40\" height=\"40\"/> </a> <a href=\"https://www.tensorflow.org\" target=\"_blank\" rel=\"noreferrer\"> <img src=\"https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg\" alt=\"tensorflow\" width=\"40\" height=\"40\"/> </a> </p>\n",
+      "languages": {},
+      "url": "https://github.com/Ojjoj/Ojjoj",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "glamora",
+      "about": "Electron application for a jewelry store",
+      "description": "Electron application for a jewelry store",
+      "readme_content": "# React + Vite\n\nThis template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh\n- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh\n\n## Expanding the ESLint configuration\n\nIf you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.\n",
+      "languages": {
+        "JavaScript": 22144,
+        "HTML": 410,
+        "CSS": 60
+      },
+      "url": "https://github.com/Ojjoj/glamora",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "personal-website",
+      "about": "This website is for sharing my experiences, skills and ideas ",
+      "description": "This website is for sharing my experiences, skills and ideas ",
+      "readme_content": "# React + Vite\n\nThis template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh\n- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh\n\n## Expanding the ESLint configuration\n\nIf you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.\n",
+      "languages": {
+        "CSS": 13014,
+        "JavaScript": 5948,
+        "HTML": 387
+      },
+      "url": "https://github.com/Ojjoj/personal-website",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "Ball-Ninja",
+      "about": "A game inspired by e-gon adventures game",
+      "description": "A game inspired by e-gon adventures game",
+      "readme_content": null,
+      "languages": {
+        "Python": 36723
+      },
+      "url": "https://github.com/Ojjoj/Ball-Ninja",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "30-Days-Of-React",
+      "about": "30 Days of  React challenge is a step by step guide to learn React in 30 days.  These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+      "description": "30 Days of  React challenge is a step by step guide to learn React in 30 days.  These videos may help too: https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw",
+      "readme_content": null,
+      "languages": {
+        "JavaScript": 1363728,
+        "HTML": 52446,
+        "SCSS": 10080,
+        "CSS": 2207
+      },
+      "url": "https://github.com/Ojjoj/30-Days-Of-React",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": true,
+      "default_branch": "master"
+    },
+    {
+      "name": "Resilience-in-Internet-of-Military-Things-Framework",
+      "about": "Resilience in Internet of Military Things framework Python code",
+      "description": "Resilience in Internet of Military Things framework Python code",
+      "readme_content": null,
+      "languages": {
+        "Python": 6983
+      },
+      "url": "https://github.com/Ojjoj/Resilience-in-Internet-of-Military-Things-Framework",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "Codeforces-Wizard",
+      "about": "Codeforces Wizard is a Python tool to track the progress of users",
+      "description": "Codeforces Wizard is a Python tool to track the progress of users",
+      "readme_content": "# Codeforces Wizard\n\n**Codeforces Wizard** is a tool designed to help you quickly access and manage Codeforces user information.\n\n## Features\n\n- **Show User Information:** Easily display names, ratings, and the number of problems solved by any Codeforces user.\n- **Search Functionality:** Find user's rating or solved problems count by their name.\n\n## Getting Started\n\nTo get started with Codeforces Wizard, follow these simple steps:\n\n### 1. Clone the Repository\n\nClone this repository to your local machine using the following command:\n\n```bash\ngit clone https://github.com/Ojjoj/Codeforces-Wizard.git\n```\n\n### 2. Install Requirements\n\nNavigate to the project directory and install the required packages:\n\n```bash\ncd Codeforces-Wizard\npip install -r requirements.txt\n```\n\n### 3. Run the Tool\n\nRun the \\`main.py\\` file to start using Codeforces Wizard:\n\n```bash\npython main.py\n```\n\n## Contributing\n\nWe welcome contributions! Feel free to submit a pull request or open an issue if you have any suggestions or find a bug.\n\n## Contact\n\nFor any questions or inquiries, please contact [Karam Ahmad Kassem](mailto:karam.ahmadkassem@gmail.com).\n\n---\n\n**Happy Coding!**\n",
+      "languages": {
+        "Python": 16192
+      },
+      "url": "https://github.com/Ojjoj/Codeforces-Wizard",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "School-System",
+      "about": "This is a School management system, done in web languages",
+      "description": "This is a School management system, done in web languages",
+      "readme_content": "# School-System\nThis is a School management system, done in web languages\n\n# Authors\nRazan \nKaram\n\n# Razan",
+      "languages": {
+        "PHP": 213138,
+        "JavaScript": 47445,
+        "CSS": 20407,
+        "Hack": 3820
+      },
+      "url": "https://github.com/Ojjoj/School-System",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    }
+  ],
+  "statistics": {
+    "total_repositories": 9,
+    "repositories_with_readme": 5,
+    "total_stars": 0,
+    "total_forks": 0,
+    "unique_languages": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "SCSS",
+      "PHP",
+      "Hack"
+    ],
+    "language_distribution": {
+      "Python": 60007,
+      "JavaScript": 1439265,
+      "HTML": 53243,
+      "CSS": 35688,
+      "SCSS": 10080,
+      "PHP": 213138,
+      "Hack": 3820
+    }
+  },
+  "metadata": {
+    "scraped_at": "2025-06-25T19:40:23.132709",
+    "scraper_version": "1.0.0",
+    "total_api_requests": 37,
+    "saved_to_file": null,
+    "save_error": null
+  }
+}

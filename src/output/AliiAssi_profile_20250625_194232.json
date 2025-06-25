@@ -1,0 +1,427 @@
+{
+  "profile": {
+    "name": "Ali Assi",
+    "bio": null,
+    "company": null,
+    "website": "",
+    "twitter": null,
+    "location": null,
+    "email": null,
+    "public_repos": 23,
+    "followers": 1,
+    "following": 0,
+    "profile_readme": null,
+    "avatar_url": "https://avatars.githubusercontent.com/u/132567993?v=4",
+    "login": "AliiAssi"
+  },
+  "repositories": [
+    {
+      "name": "arabic-ai-question-generator",
+      "about": "A scalable Flask application that uses Google Gemini AI to generate comprehensive Arabic questions from text input or PDF documents, featuring real-time user analytics and multi-threaded processing.",
+      "description": "A scalable Flask application that uses Google Gemini AI to generate comprehensive Arabic questions from text input or PDF documents, featuring real-time user analytics and multi-threaded processing.",
+      "readme_content": "# AI Content Generator 🤖\n\nA scalable, multi-threaded Flask application that generates comprehensive Arabic questions from text input or PDF files using Google's Gemini AI.\n\n## ✨ Features\n\n### 🔥 Current Features\n- **📝 Text-to-Questions Generation**: Input Arabic text and generate comprehensive, non-redundant questions\n- **📄 PDF Upload & Processing**: Upload PDF files for automatic text extraction and question generation\n- **🧵 Multi-threaded Processing**: Concurrent request handling with ThreadPoolExecutor for better performance\n- **👥 Real-time User Analytics**: Track concurrent users, session analytics, and detailed usage statistics\n- **📊 Admin Dashboard**: Live monitoring of active users, request statistics, and system health\n- **🌐 Bilingual Support**: Arabic and English language support (Arabic primary)\n- **⚡ Async/Sync Processing**: Choose between synchronous and asynchronous content generation\n- **🔒 Thread-safe Operations**: Safe concurrent access to AI APIs with proper locking mechanisms\n- **📋 Comprehensive Logging**: Detailed logs for user activity, errors, and system performance\n- **🎨 Modern UI**: Clean, responsive Arabic RTL interface with drag-and-drop PDF upload\n\n### 🚀 Future Features\n- **🔐 User Authentication**: Login system with role-based access control\n- **💾 Database Integration**: Store user sessions, generated content, and analytics\n- **🔄 Content Caching**: Cache frequently requested content for faster responses\n- **📈 Advanced Analytics**: Export usage reports, user behavior analysis\n- **🌍 Multi-language Expansion**: Support for more languages beyond Arabic/English\n- **🤖 Multiple AI Models**: Integration with different AI providers (OpenAI, Claude, etc.)\n- **📱 API Rate Limiting**: Prevent abuse with configurable rate limits\n- **🔔 Real-time Notifications**: WebSocket integration for live updates\n- **📤 Content Export**: Export generated questions to various formats (Word, PDF, JSON)\n- **🎯 Question Categorization**: Automatic classification of questions by type/difficulty\n\n## 📁 Project Structure\n\n### 🏗️ Core Application (`app/`)\n```\napp/\n├── clients/\n│   └── ai_client.py           # Google GenAI client wrapper with error handling\n├── config/\n│   └── settings.py            # Environment-based configuration management\n├── core/\n│   ├── exceptions.py          # Custom exception hierarchy for error handling\n│   └── models.py              # Data models for requests/responses with validation\n├── services/\n│   ├── content_service.py     # Multi-threaded content generation orchestration\n│   ├── pdf_service.py         # PDF upload, validation, and text extraction\n│   └── user_tracker.py        # Concurrent user tracking and analytics\n├── prompts/\n│   └── arabic/\n│       └── questions.py       # Arabic question generation prompt templates\n└── app.py                     # Flask application factory with route definitions\n```\n\n### 🎨 Frontend (`app/frontend/`)\n```\nfrontend/\n├── static/\n│   ├── css/\n│   │   └── main.css           # Modern RTL styling with responsive design\n│   └── js/\n│       └── main.js            # Frontend logic for text/PDF upload handling\n└── templates/\n    ├── admin_dashboard.html   # Real-time user analytics dashboard\n    └── index.html             # Main application interface with dual input modes\n```\n\n### 📊 Data & Logs\n```\ndocs/                          # Documentation and sample PDFs for testing\nlogs/                          # Application logs and user activity tracking\nrequirements.txt               # Python dependencies (Flask, GenAI, threading libs)\nrun.py                         # Application entry point and server startup\n```\n\n## 🚀 Quick Start\n\n### 1️⃣ Environment Setup\n```bash\n# Clone the repository\ngit clone https://github.com/AliiAssi/arabic-ai-question-generator.git\ncd ai-content-generator\n\n# Create virtual environment\ncd scripts\npython setup_env.py\ncd ../\n\n# Activate virtual environment\n# Windows:\nvenv\\Scripts\\activate\n# Linux/Mac:\nsource venv/bin/activate\n```\n\n### 2️⃣ Configuration\n```bash\n# Create environment file\ncp app/.env.example app/.env\n\n# Edit app/.env with your settings:\nGENAI_API_KEY=your_google_genai_api_key_here\nDEBUG=True\nMAX_WORKERS=4\n```\n\n### 3️⃣ Run Application\n```bash\npython run.py\n```\n\nNavigate to `http://localhost:5000` to access the application.\n\n## 🎯 Usage\n\n### 📝 Text Input Mode\n1. Select \"إدخال نص\" (Text Input) tab\n2. Enter Arabic text in the textarea\n3. Click \"توليد الأسئلة\" (Generate Questions)\n4. View comprehensive questions generated from your text\n\n### 📄 PDF Upload Mode\n1. Select \"رفع ملف PDF\" (PDF Upload) tab\n2. Drag & drop or click to select a PDF file (max 50MB)\n3. Click \"استخراج النص وتوليد الأسئلة\" (Extract Text & Generate Questions)\n4. View questions generated from extracted PDF content\n\n### 📊 Admin Dashboard\nVisit `http://localhost:5000/admin/dashboard` to monitor:\n- Real-time concurrent user count\n- User activity by time frames\n- System statistics and performance metrics\n- Auto-refreshing analytics every 30 seconds\n\n## 🔧 API Endpoints\n\n| Endpoint | Method | Description |\n|----------|--------|-------------|\n| `/` | GET | Main application interface |\n| `/generate` | POST | Generate questions from text or PDF |\n| `/health` | GET | System health check and status |\n| `/stats` | GET | JSON user statistics and analytics |\n| `/admin/dashboard` | GET | Admin monitoring dashboard |\n| `/admin/users` | GET | Detailed user session information |\n\n## 🏗️ Architecture Highlights\n\n### 🧵 Multi-threading Design\n- **ThreadPoolExecutor**: Configurable worker threads for concurrent processing\n- **Thread-safe AI Client**: Mutex locks prevent API race conditions\n- **Async/Sync Support**: Choose processing mode based on requirements\n\n### 📊 User Analytics\n- **Session Tracking**: UUID-based user identification across requests\n- **Real-time Monitoring**: Live concurrent user counting and activity logging\n- **Automatic Cleanup**: Inactive session removal with configurable timeouts\n\n### 🔒 Security Features\n- **File Validation**: PDF type checking, size limits, and malware protection\n- **Input Sanitization**: Text validation and XSS prevention\n- **Rate Limiting Ready**: Framework in place for future rate limiting implementation\n\n## 🛠️ Development\n\n### 📋 Prerequisites\n- Python 3.8+\n- Google GenAI API key\n- Modern web browser with JavaScript enabled\n\n### 🧪 Testing\n```bash\n# Extract project structure\npython scripts/extract_project_structure.py\n\n# Monitor logs\ntail -f logs/concurrent_users.log\ntail -f logs/user_activity.log\n```\n\n### 🔧 Configuration Options\n\n| Variable | Default | Description |\n|----------|---------|-------------|\n| `GENAI_API_KEY` | Required | Google GenAI API authentication key |\n| `SECRET_KEY` | Required | Flask session encryption key |\n| `MAX_WORKERS` | 4 | ThreadPoolExecutor worker count |\n| `DEBUG` | False | Development mode toggle |\n| `LOG_LEVEL` | INFO | Application logging verbosity |\n| `REQUEST_TIMEOUT` | 300 | Maximum request processing time (seconds) |\n\n## 🙏 Acknowledgments\n\n- **Google Gemini AI** for advanced text processing capabilities\n- **Flask Community** for the robust web framework\n- **Arabic NLP Community** for language processing insights\n\n---\n\n**Built with ❤️ for the Arabic-speaking community**\n\n*Empowering education through AI-driven question generation*",
+      "languages": {
+        "Python": 87931,
+        "JavaScript": 47540,
+        "CSS": 36423,
+        "HTML": 22454,
+        "Dockerfile": 861
+      },
+      "url": "https://github.com/AliiAssi/arabic-ai-question-generator",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "dev"
+    },
+    {
+      "name": "mern-stack-learning",
+      "about": "This repository appears to be a personal learning space for exploring different aspects of the MERN stack (MongoDB, Express.js, React, Node.js) and various React concepts. It contains multiple sub-projects, including a basic MERN setup, React Hooks examples, and a real-time MERN chat application using WebSockets.",
+      "description": "This repository appears to be a personal learning space for exploring different aspects of the MERN stack (MongoDB, Express.js, React, Node.js) and various React concepts. It contains multiple sub-projects, including a basic MERN setup, React Hooks examples, and a real-time MERN chat application using WebSockets.",
+      "readme_content": "# 📚 MERN Stack Learning Playground\n\n✨ Welcome to `mern-stack-learning`! ✨\n\nThis repository appears to be a personal learning space for exploring different aspects of the MERN stack (MongoDB, Express.js, React, Node.js) and various React concepts. It contains multiple sub-projects, including a basic MERN setup, React Hooks examples, and a real-time MERN chat application using WebSockets.\n\n---\n\n## 🛠️ Built With\n\n* **JavaScript** 💻: The core language across the entire stack.\n* **React.js** ⚛️: For building dynamic and interactive user interfaces.\n* **Node.js** & **Express.js**: For the backend server and API development.\n* **MongoDB**: A NoSQL database for storing application data.\n* **WebSockets**: For real-time communication in the chat application.\n* **HTML** & **CSS**: For structuring and styling the web interfaces.\n* **Vite**: A fast build tool for modern web projects.\n* **JSON**: For data exchange and configuration files.\n\n---\n\n## 🚀 Getting Started\n\nGiven the diverse nature of this repository, each sub-project might have its own setup instructions. Here's a general guide to get started with the different parts:\n\n1.  **Clone the repository:**\n    ```bash\n    git clone https://github.com/AliiAssi/mern-stack-learning.git\n    ```\n2.  **Navigate into a specific sub-project** (e.g., `MERN/Client`, `MERN/Server`, `react/Hooks`, `web socket mern chat application/Client`, `web socket mern chat application/Server`, `web socket mern chat application/Socket`).\n3.  **Install dependencies** for both client and server parts:\n    ```bash\n    npm install\n    # or if you use yarn\n    yarn install\n    ```\n4.  **Set up environment variables** (check `.env` files if present in server directories).\n5.  **Start the development servers** for both client and server, usually with commands like `npm run dev` or `npm start`.\n\n---\n\n## 💡 Project Structure & Key Features\n\nThis repository is organized into several distinct learning modules:\n\n* **`MERN/`**: Contains a basic MERN stack application.\n    * **Client**: A React frontend.\n    * **Server**: A Node.js/Express.js backend with MongoDB integration (`Models/Users.js` defines a user schema, `server.js` handles API endpoints).\n* **`react/Hooks/`**: Dedicated to exploring various React Hooks.\n    * Examples for `useState`, `useEffect`, `useCallback`, `useMemo`, and `useRef` are likely present in the `src/Hooks/` directory.\n* **`react/react1/`**: Appears to be an older or introductory React project.\n    * Includes components for a `Team`, `ToDo` list, `Header`, and `Home`.\n* **`web socket mern chat application/`**: A fully-fledged real-time chat application.\n    * **Client**: A React frontend with chat-specific components (`components/chat`, `pages/ChatBox.jsx`, `context/ChatContext.jsx`, `context/AuthContext.jsx`).\n    * **Server**: A Node.js/Express.js backend handling chat logic (`Controllers/MessageController.js`, `Controllers/chatController.js`, `Controllers/userController.js`) and models (`Models/chatModel.js`, `Models/messageModel.js`, `Models/userModel.js`).\n    * **Socket**: A dedicated WebSocket server (`Socket/index.js`) for real-time communication.\n\n### Highlighted Functions\n\n* **User Authentication & Authorization**: Functions like `registerUser`, `loginUser`, `createToken` (in `web socket mern chat application/Server/Controllers/userController.js`).\n* **Chat Functionality**: `createChat`, `findUserChats`, `findChat` (in `web socket mern chat application/Server/Controllers/chatController.js`) and `createMessage`, `getMessages` (in `web socket mern chat application/Server/Controllers/MessageController.js`).\n* **React Component Logic**: Various `render` methods and state management functions within the `react/react1` components (e.g., `Team.js`, `ToDo.js`).\n* **API Utilities**: `postRequest`, `getRequest` (in `web socket mern chat application/Client/src/utils/services.js`) for interacting with backend APIs.\n\n---\n\n## 🤝 Contributing\n\nThis repository is primarily for learning, but if you have suggestions or improvements, feel free to contribute!\n\n1.  Fork the repository.\n2.  Create a new branch for your feature or bug fix.\n3.  Make your changes, adhering to the existing code style.\n4.  Write clear and concise commit messages.\n5.  Submit a pull request.\n\n---\n\nHappy coding and learning! 🧑‍💻\n",
+      "languages": {
+        "JavaScript": 64754,
+        "CSS": 11270,
+        "HTML": 3118
+      },
+      "url": "https://github.com/AliiAssi/mern-stack-learning",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "pro-readme-ai",
+      "about": "Pro-ReadMe-Ai is a README generator (it is not finished yet) that transforms any public GitHub repository into a beautifully structured, professional README.md file, automatically.",
+      "description": "Pro-ReadMe-Ai is a README generator (it is not finished yet) that transforms any public GitHub repository into a beautifully structured, professional README.md file, automatically.",
+      "readme_content": null,
+      "languages": {
+        "Python": 3385
+      },
+      "url": "https://github.com/AliiAssi/pro-readme-ai",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "dev"
+    },
+    {
+      "name": "restaurant-management-system",
+      "about": "This project is a comprehensive system designed to help manage the operations of a restaurant. It covers everything from product management and orders to customer and admin functionalities.",
+      "description": "This project is a comprehensive system designed to help manage the operations of a restaurant. It covers everything from product management and orders to customer and admin functionalities.",
+      "readme_content": "# 🍽️ Restaurant Management System\n\n✨ Welcome to `restaurant-management-system`! ✨\n\nThis project is a comprehensive system designed to help manage the operations of a restaurant. It covers everything from product management and orders to customer and admin functionalities.\n\n---\n\n## 🛠️ Built With\n\n* **PHP** 🐘: The core language powering the backend logic and dynamic content.\n* **HTML** & **CSS**: For structuring and styling the user interfaces, ensuring a presentable layout.\n* **JavaScript** 🌐: For interactive elements and front-end functionalities.\n* **Images (.jpg, .png)**: Used for product visuals, user profiles, and general aesthetics.\n\n---\n\n## 🚀 Getting Started\n\nTo get this restaurant management system running on your local machine, here are the general steps:\n\n1.  **Clone the repository.**\n2.  **Set up a PHP server environment** (like Apache or Nginx) and a database (like MySQL).\n3.  **Import the database schema** (you'll need to find the SQL file, often in a `database` directory if one exists, or create tables based on the code's queries).\n4.  **Configure your database connection** in the relevant PHP files (e.g., `components/connection.php`).\n5.  **Place the project files** in your web server's document root.\n6.  **Access the system** through your web browser.\n\n---\n\n## 💡 Key Features\n\nThis system offers a wide range of functionalities for both restaurant staff and customers:\n\n* **Admin Panel**:\n    * **Product Management**: Add, update, and delete menu items (food, drinks, desserts, etc.).\n    * **User Management**: View and manage customer and admin accounts.\n    * **Order Management**: Track new, pending, and completed orders, with options to change their status.\n    * **Reservations**: Handle customer reservations.\n    * **Sales History & Profit Tracking**: Monitor past orders and overall profits.\n* **Customer Features**:\n    * **Menu Browse**: View various categories of food and drinks.\n    * **Shopping Cart**: Add and manage items in their cart.\n    * **Checkout & Ordering**: Place new orders with different payment options.\n    * **Order Tracking**: Monitor the status of their placed orders.\n    * **User Profile Management**: Edit personal information.\n    * **Live Chat**: Communicate with admin/support.\n    * **Favorites**: Mark favorite dishes.\n\n---\n\n## 🤝 Contributing\n\nWe welcome contributions to make this restaurant management system even better! If you're interested in helping out:\n\n1.  Fork the repository.\n2.  Create a new branch for your feature or bug fix.\n3.  Implement your changes, ensuring they align with the project's structure and coding style.\n4.  Write clear and descriptive commit messages.\n5.  Submit a pull request with a detailed explanation of your work.\n\n---\n\nManage your restaurant with ease! 📊🍔\n",
+      "languages": {
+        "PHP": 357536,
+        "CSS": 43233,
+        "Hack": 9444,
+        "JavaScript": 35
+      },
+      "url": "https://github.com/AliiAssi/restaurant-management-system",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "laravel-blog",
+      "about": "This project is a straightforward blog application built with Laravel. It provides the core functionalities for creating, managing, and displaying blog posts.",
+      "description": "This project is a straightforward blog application built with Laravel. It provides the core functionalities for creating, managing, and displaying blog posts.",
+      "readme_content": "# ✍️ Laravel Blog\n\n✨ Welcome to `laravel-blog`! ✨\n\nThis project is a straightforward blog application built with Laravel. It provides the core functionalities for creating, managing, and displaying blog posts.\n\n---\n\n## 🛠️ Built With\n\n* **PHP** 🐘: The main programming language for this blog.\n* **Laravel**: The robust PHP framework that powers the application.\n* **JavaScript** & **JSON**: For dynamic client-side interactions and data handling.\n* **XML**: Potentially used for various configurations or data formats.\n\n---\n\n## 🚀 Getting Started\n\nTo get this blog up and running on your local machine, follow these steps:\n\n1.  **Clone the repository.**\n2.  **Install PHP dependencies.**\n3.  **Set up your environment file** (`.env`) with your database configuration.\n4.  **Generate your application key.**\n5.  **Run database migrations** to create the necessary tables.\n6.  **Seed the database** (optional) to populate with some initial data.\n7.  **Start the local development server.**\n\n---\n\n## 💡 Key Features\n\nThis blog application includes essential features for content management and user interaction:\n\n* **User Authentication**: Handles user registration, login, and password management.\n* **Post Management**: Provides full CRUD (Create, Read, Update, Delete) functionality for blog posts.\n* **Home & Pages**: Core routing for the blog's main pages.\n* **Console Commands & Exceptions**: Standard Laravel components for background tasks and error handling.\n\n---\n\n## 🤝 Contributing\n\nWe welcome contributions to make this blog even better! If you'd like to contribute, please:\n\n1.  Fork the repository.\n2.  Create a new branch for your feature or bug fix.\n3.  Make your changes, ensuring they follow the project's coding standards.\n4.  Write clear and concise commit messages.\n5.  Submit a pull request with a detailed description of your work.\n\n---\n\nHappy blogging! 📝\n",
+      "languages": {
+        "PHP": 86832,
+        "Blade": 57973,
+        "CSS": 3222,
+        "JavaScript": 548,
+        "SCSS": 290,
+        "Java": 207
+      },
+      "url": "https://github.com/AliiAssi/laravel-blog",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "maze-solver",
+      "about": "This project tackles the classic problem of solving mazes. It's built to explore pathfinding algorithms and demonstrate how to navigate through a given maze structure.",
+      "description": "This project tackles the classic problem of solving mazes. It's built to explore pathfinding algorithms and demonstrate how to navigate through a given maze structure.",
+      "readme_content": "# 🐍 Maze Solver\n\n✨ Welcome to `maze-solver`! ✨\n\nThis project tackles the classic problem of solving mazes. It's built to explore pathfinding algorithms and demonstrate how to navigate through a given maze structure.\n\n---\n\n## 🛠️ Built With\n\n* **Python** 🐍: The primary language used for developing this maze solver.\n\n---\n\n## 🚀 Getting Started\n\nTo run this maze solver on your local machine, it's pretty straightforward:\n\n1.  **Clone the repository:**\n    ```bash\n    git clone https://github.com/AliiAssi/maze-solver.git\n    ```\n2.  **Navigate into the project directory:**\n    ```bash\n    cd maze-solver\n    ```\n3.  **Run the Python script:**\n    ```bash\n    python maze.py\n    ```\n\n---\n\n## 💡 Key Features & Usage\n\nThe `maze.py` script contains the core logic for the maze solver. Here are some of the key functions that drive its operation:\n\n* `__init__(self, d)`: Initializes the maze structure.\n* `find(self, x)`: Likely part of a Disjoint Set Union (DSU) data structure, used for finding the representative of a set.\n* `union(self, a, b)`: Also part of a DSU, used for merging two sets.\n* `draw_line(self, x1, y1, x2, y2)`: Probably handles the visual representation of maze walls.\n* `print_external()`: Prints the outer boundaries of the maze.\n* `print_maze(self, list)`: Renders the maze, potentially including the solved path.\n* `construct_optional_union_list(d)`: Helps in building the maze by deciding which walls to remove.\n\nYou can run the `maze.py` file to see the maze solver in action!\n\n---\n\n## 🤝 Contributing\n\nWe'd love your help to improve this maze solver! If you're interested in contributing:\n\n1.  Fork the repository.\n2.  Create a new branch for your feature or bug fix.\n3.  Implement your changes, ensuring they follow good Python practices.\n4.  Write clear and descriptive commit messages.\n5.  Submit a pull request with a detailed explanation of your work.\n\n---\n\nMay your path be ever clear! 🧭\n",
+      "languages": {
+        "Python": 2488
+      },
+      "url": "https://github.com/AliiAssi/maze-solver",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "laravel-rest",
+      "about": "This project serves as a foundational Laravel application, likely configured for building a RESTful API. It includes essential components for user management, administrative controls, and potentially e-commerce functionalities.",
+      "description": "This project serves as a foundational Laravel application, likely configured for building a RESTful API. It includes essential components for user management, administrative controls, and potentially e-commerce functionalities.",
+      "readme_content": "# 🚀 Laravel RESTful API\n\n✨ Welcome to `laravel-rest`! ✨\n\nThis project serves as a foundational Laravel application, likely configured for building a RESTful API. It includes essential components for user management, administrative controls, and potentially e-commerce functionalities.\n\n---\n\n## 🛠️ Built With\n\n* **PHP** 🐘: The core language powering this application.\n* **Laravel**: The robust PHP framework used for development.\n* **JavaScript** & **JSON**: For dynamic client-side interactions and data exchange.\n* **XML**: Potentially used for various configurations or data formats.\n\n---\n\n## 🚀 Getting Started\n\nTo get this project running on your local machine, follow these standard steps:\n\n1.  **Clone the repository.**\n2.  **Install PHP and JavaScript dependencies.**\n3.  **Set up your environment variables.**\n4.  **Generate your application key.**\n5.  **Run database migrations.**\n6.  **Seed the database (optional).**\n7.  **Start the local development server.**\n\n---\n\n## 💡 Key Features\n\nThis project appears to cover several key areas:\n\n* **User Authentication & Authorization**: Secure user handling using Laravel Fortify and Jetstream.\n* **Admin Panel**: Comprehensive administrative controls for managing users, food items, reservations, and orders.\n* **E-commerce Functionality**: Features like a shopping cart, checkout process, and order tracking.\n* **Database Management**: Structured with migrations and seeders for efficient data handling.\n\n---\n\n## 🤝 Contributing\n\nContributions are always welcome! If you'd like to contribute, please:\n\n1.  Fork the repository.\n2.  Create a new branch for your feature or bug fix.\n3.  Make your changes following the project's coding standards.\n4.  Submit a pull request with a clear description.\n\n---\n\nFeel free to explore and build upon this foundation! 🌐\n",
+      "languages": {
+        "JavaScript": 1843838,
+        "CSS": 833223,
+        "HTML": 667154,
+        "Blade": 237320,
+        "SCSS": 161497,
+        "PHP": 134695
+      },
+      "url": "https://github.com/AliiAssi/laravel-rest",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "laravel-recipe-sharing-platform",
+      "about": "This is a Laravel-based web application designed for sharing and discovering delicious recipes. ",
+      "description": "This is a Laravel-based web application designed for sharing and discovering delicious recipes. ",
+      "readme_content": "# 🍲 Laravel Recipe Sharing Platform\n\n✨ Welcome to `laravel-recipe-sharing-platform`! ✨\n\nThis is a Laravel-based web application designed for sharing and discovering delicious recipes. 🍜🍰\n\n---\n\n## 🚀 Getting Started\n\nTo get this project up and running on your local machine, follow these steps:\n\n1.  **Clone the repository:**\n    ```bash\n    git clone https://github.com/AliiAssi/laravel-recipe-sharing-platform.git\n    ```\n2.  **Install PHP dependencies:**\n    ```bash\n    composer install\n    ```\n3.  **Set up your environment file:**\n    ```bash\n    cp .env.example .env\n    ```\n    Then, configure your database and other settings in the newly created `.env` file.\n4.  **Generate application key:**\n    ```bash\n    php artisan key:generate\n    ```\n5.  **Run database migrations:**\n    ```bash\n    php artisan migrate\n    ```\n6.  **Seed the database (optional, for demo data):**\n    ```bash\n    php artisan db:seed\n    ```\n7.  **Start the local development server:**\n    ```bash\n    php artisan serve\n    ```\n\n---\n\n## 🛠️ Built With\n\n* **PHP** 🐘 - The primary language for this platform.\n* **Laravel** - The web application framework used.\n* **JavaScript** & **JSON** - For front-end interactivity and data handling.\n* **XML** - Potentially for configuration or data exchange.\n\n---\n\n## 💡 Key Features & Usage\n\nThis platform offers core functionalities for managing recipes and user interactions:\n\n* **User Authentication** 🔐: Handles user registration, login, and password management.\n* **Recipe Management** 🍲: Provides comprehensive CRUD operations for recipes (create, view, edit, delete), and includes notifications for new recipes.\n* **Category Management** 🏷️: Allows for adding, viewing, editing, and deleting recipe categories.\n* **Favorites** ❤️: Manages users' favorite recipes.\n* **Ratings** ⭐: Handles recipe ratings, including viewing average ratings and individual ratings.\n* **Reviews** ✍️: Enables users to add and manage reviews for recipes.\n* **User Profiles** 👤: Manages user profiles, including viewing, editing, and privacy settings.\n* **Notifications** 🔔: Sends notifications when new recipes are added.\n\n---\n\n## 🤝 Contributing\n\nWe welcome contributions to make this recipe-sharing platform even better! If you'd like to contribute, please follow these guidelines:\n\n1.  Fork the repository.\n2.  Create a new branch for your feature or bug fix.\n3.  Make your changes and ensure they adhere to the project's coding standards.\n4.  Write clear and concise commit messages.\n5.  Submit a pull request with a detailed description of your changes.\n\n---\n\nEnjoy sharing your culinary creations! 👨‍🍳👩‍🍳\n",
+      "languages": {
+        "PHP": 95013,
+        "Blade": 48443,
+        "CSS": 847,
+        "JavaScript": 334,
+        "SCSS": 290
+      },
+      "url": "https://github.com/AliiAssi/laravel-recipe-sharing-platform",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "techlarious",
+      "about": "Welcome to the Techlarious repository! This is a collection of web development projects, assignments, and learning exercises, showcasing a journey from fundamental concepts to a complete full-stack application.",
+      "description": "Welcome to the Techlarious repository! This is a collection of web development projects, assignments, and learning exercises, showcasing a journey from fundamental concepts to a complete full-stack application.",
+      "readme_content": "# 🚀 Techlarious: A Full-Stack Journey\n\nWelcome to the **Techlarious** repository\\! This is a collection of web development projects, assignments, and learning exercises, showcasing a journey from fundamental concepts to a complete full-stack application.\n\n-----\n\n## 🌟 Final Project: Full-Stack Blog System\n\nThe centerpiece of this repository is a complete MERN stack blog application. It features a React-based client for a dynamic user experience and a robust Node.js/Express server to handle business logic and data persistence.\n\n### ✨ Features\n\n| Frontend (Client) 🎨 | Backend (Server) ⚙️ |\n| :--- | :--- |\n| 👤 **User Authentication:** Secure user registration and login. | 🔐 **JWT Authentication:** Secure API endpoints with JSON Web Tokens. |\n| 📝 **Full CRUD for Posts:** Create, read, update, and delete blog posts. | 🗂️ **RESTful API:** Well-structured API for posts, users, comments, & categories. |\n| 🖼️ **Image Uploads:** Users can upload profile pictures and post images. | 💾 **MVC Architecture:** Organized server structure (Models, Views, Controllers). |\n| 👍 **Post Engagement:** Like posts and leave comments. | 👤 **User & Role Management:** Middleware to verify users and admins. |\n| 🗂️ **Category Filtering:** Browse posts by their assigned category. | 🖼️ **Image Handling:** Multer middleware for handling file uploads. |\n| 🧑‍💼 **Admin Dashboard:** A dedicated dashboard for admins to manage users, posts, comments, and categories. | 📦 **Data Validation:** Joi validation for request payloads. |\n| 📱 **Responsive Design:** A clean, user-friendly interface that works on all devices. | 🔑 **Password Hashing:** Bcrypt for hashing user passwords before database storage. |\n| ⚛️ **State Management:** Centralized state management using **Redux Toolkit**. | 🌐 **CORS & Security:** Basic security headers and CORS implemented. |\n\n### 💻 Technology Stack\n\n  * **Frontend:** React.js, Redux Toolkit, CSS3\n  * **Backend:** Node.js, Express.js\n  * **Database:** MongoDB (with Mongoose)\n  * **Authentication:** JSON Web Tokens (JWT)\n  * **File Uploads:** Multer\n  * **Build Tool:** Vite\n\n-----\n\n## 🤝 Contributing\n\nContributions, issues, and feature requests are welcome\\! Since this is a personal learning repository, the focus is on growth and experimentation. Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/AliiAssi/techlarious/issues).\n\nIf you'd like to contribute, please follow these steps:\n\n1.  **Fork the Project**: Click the 'Fork' button at the top right of this page.\n2.  **Create your Feature Branch**: `git checkout -b feature/AmazingFeature`\n3.  **Commit your Changes**: `git commit -m 'Add some AmazingFeature'`\n4.  **Push to the Branch**: `git push origin feature/AmazingFeature`\n5.  **Open a Pull Request**: Create a new pull request from your forked repository.\n\nPlease open an issue first to discuss what you would like to change.\n\n-----\n\n## 🎓 Learning & Assignments\n\nThis repository also contains a variety of smaller projects and notes covering core web development concepts:\n\n  * **JavaScript Fundamentals (`/learning js`)**:\n      * Object-Oriented Programming (OOP)\n      * Promises & Async/Await\n      * ES6 Features (Destructuring, Spread Operator)\n      * Advanced Functions (Arrow functions)\n  * **HTML & CSS (`/css_1`, `/css_2`, `/forms_assigment`)**:\n      * Assignments focusing on building static layouts, complex forms, and responsive design.\n  * **Backend Basics (`/Backend/backend-project`)**:\n      * An initial backend project exploring Node.js, Express, and Mongoose schemas.\n  * **Version Control (`/GIT`)**:\n      * Notes and commands for using Git effectively.\n",
+      "languages": {
+        "JavaScript": 135142,
+        "CSS": 54820,
+        "HTML": 46481
+      },
+      "url": "https://github.com/AliiAssi/techlarious",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "etl-database-project",
+      "about": "This repository contains an ETL (Extract, Transform, Load) database project using Batch scripting and SQL. It automates data processing workflows with SQL table creation, data insertion, and validation steps.",
+      "description": "This repository contains an ETL (Extract, Transform, Load) database project using Batch scripting and SQL. It automates data processing workflows with SQL table creation, data insertion, and validation steps.",
+      "readme_content": "# 📦 ETL-project\n\n## 📋 Project Overview\n\nThis repository contains an ETL (Extract, Transform, Load) database project using Batch scripting and SQL. It automates data processing workflows with SQL table creation, data insertion, and validation steps.\n\n---\n\n## 🛠️ Technology Stack\n\n* **Batch scripts** (.bat) — automate ETL pipeline steps 🖥️\n* **SQL** (.sql) — database schema, data insertion, and transformations 🗃️\n* **CSV files** (.csv) — input and output datasets 📊\n* **Additional files:** Presentation (.pptx) 📽️, Image (.jpg) 🖼️, and Documentation (.txt) 📜\n\n---\n\n## 🚀 Installation & Setup\n\n1. Clone this repository:\n\n   ```bash\n   git clone https://github.com/AliiAssi/etl-database-project.git\n   ```\n2. Make sure you have a MySQL server running 🐬\n3. Run the batch files (`.bat`) in the order to execute ETL steps:\n\n   * `finish.bat`\n   * `go.bat`\n   * `load.bat`\n   * `check.bat`\n4. Use the `.sql` files to create tables and insert data into your database:\n\n   * `db_home_work/project.sql`\n   * `project/create-load-transform.sql`\n   * `db_home_work/validate.sql`\n   * `project/extract.sql`\n\n---\n\n## 📂 Project Structure\n\n* `db_home_work/` — contains SQL scripts and batch files related to data loading and validation\n* `project/` — ETL scripts and helper files for extraction and transformation\n\n---\n\n## 🎯 Usage Examples\n\n* Run batch files to perform data extraction, loading, transformation, and validation automatically\n* Use the SQL scripts to understand database structure and modify data insertion logic\n\n---\n\n## 🤝 Contributing\n\nContributions are welcome! Feel free to open issues or submit pull requests to improve the ETL workflows or add new features.\n\n---\n\n## 🔗 Links\n\nGitHub: [AliiAssi/etl-database-project](https://github.com/AliiAssi/etl-database-project)\n\n---\n",
+      "languages": {
+        "Batchfile": 1055
+      },
+      "url": "https://github.com/AliiAssi/etl-database-project",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "polyclinic-management-system",
+      "about": "A comprehensive, web-based Polyclinic Management System designed to streamline clinic operations. This project is built with vanilla PHP, following the MVC (Model-View-Controller) architectural pattern to ensure a structured and maintainable codebase.",
+      "description": "A comprehensive, web-based Polyclinic Management System designed to streamline clinic operations. This project is built with vanilla PHP, following the MVC (Model-View-Controller) architectural pattern to ensure a structured and maintainable codebase.",
+      "readme_content": "# 🏥 Polyclinic Management System\n\nA comprehensive, web-based Polyclinic Management System designed to streamline clinic operations. This project is built with vanilla PHP, following the MVC (Model-View-Controller) architectural pattern to ensure a structured and maintainable codebase.\n\n---\n\n## ✨ Key Features\n\nThis system is equipped with a variety of features to manage clinic activities efficiently:\n\n* **👤 Multi-user Role Management:** Different dashboards and functionalities for Managers, Secretaries, Doctors, and Patients.\n* **🔐 Secure Authentication:** Secure login and registration systems for all user types.\n* **🗓️ Appointment Scheduling:** Patients can book appointments, and secretaries/doctors can manage them (accept, reject, complete).\n* **👨‍⚕️ Doctor Management:** Managers can add, update, and remove doctor profiles and their specialities.\n* **👩‍💼 Secretary Management:** Managers can oversee secretary accounts.\n* **📋 Consultation Records:** Doctors can create and manage detailed consultation notes for each appointment.\n* **🏥 Room & Schedule Management:** Ability to manage clinic rooms and doctor's weekly schedules.\n* **🔔 Patient Notifications:** Automated notifications for patients regarding their appointment status.\n* **📄 PDF Generation:** Generate reports and appointment details using the TCPDF library.\n* **🔍 Search & Filter:** Robust search functionality to filter appointments, doctors, and records by various criteria (name, date, phone number).\n\n---\n\n## 🧑‍🤝‍🧑 User Roles\n\nThe system is designed with a clear separation of roles, providing tailored experiences for each user type:\n\n* **👑 Manager:** Has full administrative access. Manages doctors, secretaries, specialities, and rooms.\n* **🩺 Doctor:** Manages their appointments, writes consultation notes, sets fees, and views their schedule.\n* **📝 Secretary:** Manages all clinic appointments, handles booking, and can print patient records.\n* **🤒 Patient:** Can sign up, book appointments with doctors, view their appointment history, and receive notifications.\n* **👤 Guest:** Can view the clinic's public information and doctor specialities before logging in.\n\n---\n\n## 🏛️ Architecture\n\nThe application is built using the **Model-View-Controller (MVC)** pattern:\n\n* **📁 `Model/`**: Contains the PHP classes that represent the application's data structure (e.g., `Appointment.php`, `Doctor.php`, `Patient.php`). These classes are responsible for interacting with the database.\n* **📁 `View/`**: Holds all the presentation files. This includes UI components, pages for different user roles, and CSS stylesheets. It's responsible for displaying data to the user.\n* **📁 `Controller/`**: Acts as the intermediary between the Model and the View. It handles user requests, processes data (with the help of the Model), and decides which View to render.\n\n---\n\n## 💻 Technology Stack\n\n* **Backend:** PHP\n* **Frontend:** HTML5, CSS3\n* **Database:** MySQL (implied through PHP usage)\n* **PDF Generation:** [TCPDF](https://github.com/tecnickcom/TCPDF)\n* **Server:** A web server with PHP support (e.g., Apache, Nginx) is required.\n",
+      "languages": {
+        "PHP": 14486830,
+        "CSS": 12575,
+        "Hack": 2766
+      },
+      "url": "https://github.com/AliiAssi/polyclinic-management-system",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "react-learning-projects",
+      "about": "A collection of projects built while learning React.js. This repository serves as a personal journey through various concepts and technologies in the React ecosystem.",
+      "description": "A collection of projects built while learning React.js. This repository serves as a personal journey through various concepts and technologies in the React ecosystem.",
+      "readme_content": "# ⚛️ React Learning Projects\n\nA collection of projects built while learning React.js. This repository serves as a personal journey through various concepts and technologies in the React ecosystem.\n\n-----\n\n## 🚀 Projects Included\n\nThis repository contains several standalone projects, each focusing on different aspects of React development:\n\n| Project Name | Description |\n| :--- | :--- |\n| 🛍️ **Cloning Shopify** | An e-commerce front-end clone demonstrating product listings, product details, a shopping cart, and user authentication. |\n| 🎬 **Movies App** | A movie Browse application that showcases fetching data from an API, searching and filtering, and managing a list of favorite movies. |\n| 🧪 **My React App** | A sandbox for experimenting with fundamental React concepts like components, props, state, and context. |\n| 🍳 **Recipe Platform** | A platform for discovering and saving recipes, featuring recipe details, and a user favorites section. |\n| 🛒 **Shopping Cart with Redux** | A simple shopping cart application built to practice and demonstrate state management using Redux Toolkit. |\n| ✨ **Simple React Projects** | A collection of 21+ mini-projects, each designed to practice a specific React hook, concept, or small feature. |\n| 🎨 **Tailwind Design** | A project focused on exploring and implementing various UI designs and layouts using the Tailwind CSS framework. |\n\n-----\n\n## 💻 Technology Stack\n\nThis repository utilizes a modern front-end development stack:\n\n  - **Core:** React.js, JavaScript (ES6+)\n  - **Styling:** CSS3, Tailwind CSS\n  - **State Management:** Redux Toolkit, React Context API\n  - **Routing:** React Router\n  - **Build Tool:** Vite\n  - **APIs:** Fetch API for data retrieval\n\n-----\n\n## 📚 Learning & Documentation\n\nThe `Notes/` directory contains detailed markdown files on various topics encountered during the learning process, including:\n\n  - **React Hooks:** `useState`, `useEffect`, `useContext`, `useRef`, `useCallback`, and custom hooks (`useFetch`, `useLocalStorage`, `useOutsideClick`, `useWindowResize`).\n  - **State Management:** A deep dive into `redux-toolkit`.\n  - **Routing:** Comprehensive notes on `react-router-dom`.\n  - **Styling:** A guide to setting up and using `Tailwind CSS`.\n  - **API Interaction:** Best practices for fetching data.\n\n-----\n\n## 🌐 Connect with Me\n\nFeel free to explore the projects and the code. For any questions or collaborations, you can find me on [GitHub](https://www.google.com/search?q=https://github.com/AliiAssi).\n",
+      "languages": {
+        "JavaScript": 187749,
+        "HTML": 2218,
+        "CSS": 722
+      },
+      "url": "https://github.com/AliiAssi/react-learning-projects",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "java-restaurant-system",
+      "about": "A Java-based Restaurant Management System with separate Admin and Chef roles. Manage employees, products, and orders with user-friendly GUI and dynamic salary calculations.",
+      "description": "A Java-based Restaurant Management System with separate Admin and Chef roles. Manage employees, products, and orders with user-friendly GUI and dynamic salary calculations.",
+      "readme_content": "# 🍽️ java-restaurant-system\n\n## 📖 Project Description\n\nA Java-based Restaurant Management System with separate Admin and Chef roles. Manage employees, products, and orders with user-friendly GUI and dynamic salary calculations.\n\n---\n\n## 🛠️ Technology Stack\n\n* Java\n* MySQL\n* Java Swing GUI\n* Design Patterns: Strategy, Command, Adapter\n* MySQL Connector (.jar)\n* Recommended IDE: IntelliJ IDEA\n\n---\n\n## 🚀 Installation & Setup\n\n1. 💻 Install **XAMPP** to run Apache & MySQL servers.\n2. 📥 Import the `sqlFile.sql` into **phpMyAdmin** to set up the database.\n3. 🛠️ Open the project in **IntelliJ IDEA** or **Eclipse**.\n4. ▶️ Start the **MySQL server** via XAMPP control panel.\n5. ▶️ Run the **main class** to launch the app.\n\n---\n\n## 🎯 Usage Overview\n\n* 🔐 Login as **Admin** or **Chef** with Gmail and password.\n* 🧑‍💼 **Admin:** Manage admins, chefs, and products (view/update/delete).\n* 👨‍🍳 **Chef:** View salary & bonus info, accept/delete orders, update order status.\n* 🧩 Utilizes design patterns for flexible salary calculation and command execution.\n\n---\n\n## 👥 Project Participants\n\n* Ali Assi\n* Ali Diab\n---\n\n## 🤝 Contributing\n\nContributions welcome! Fork the repo, make changes, and submit pull requests. Report issues as needed.\n\n---\n",
+      "languages": {
+        "Java": 276119
+      },
+      "url": "https://github.com/AliiAssi/java-restaurant-system",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "school-management-system",
+      "about": "School Management System is a comprehensive web application built with Laravel and Tailwind CSS, designed to streamline educational administration. It features robust CRUD interfaces for managing classes, subjects, teachers, and timetables, along with role-based authentication powered by Laravel Breeze. It supports dynamic timetable creation.",
+      "description": "School Management System is a comprehensive web application built with Laravel and Tailwind CSS, designed to streamline educational administration. It features robust CRUD interfaces for managing classes, subjects, teachers, and timetables, along with role-based authentication powered by Laravel Breeze. It supports dynamic timetable creation.",
+      "readme_content": "\n# School Management System 📚🏫\n## Overview\nThis project is a Laravel-based school management system designed to simplify the management of educational data including classes, subjects, teachers, and timetables. It features a modern responsive interface built with Tailwind CSS and supports role-based authentication through Laravel Breeze. The system includes dynamic timetable creation, PDF export, and teacher-specific timetable views.\n\n## Database Schema Design\n\nThe database schema is crafted to efficiently manage educational data, featuring the following primary tables:\n\n### **Classes Table**\n- **`id`**: Unique identifier for the class.\n- **`name`**: Name of the class.\n- **`grade`**: Associated grade level.\n\n### **Timetable Table**\n- **`class_id`**: Foreign key referencing the `classes` table.\n- **`teacher_id`**: Foreign key referencing the `users` table (teachers).\n- **`subject_id`**: Foreign key referencing the `subjects` table.\n- **`start_time`**: Start time of the class.\n- **`end_time`**: End time of the class.\n- **`day_of_week`**: Day on which the class is scheduled.\n\n### **Teacher_Subject_Class Pivot Table**\n- **`class_id`**: Foreign key referencing the `classes` table.\n- **`user_id`**: Foreign key referencing the `users` table.\n- **`subject_id`**: Foreign key referencing the `subjects` table.\n- **`weekly_sessions`**: Number of weekly sessions for the subject in the class.\n\n### **Class_Subject Pivot Table**\n- **`class_id`**: Foreign key referencing the `classes` table.\n- **`subject_id`**: Foreign key referencing the `subjects` table.\n- **`required_sessions`**: Number of sessions required for the subject in the class.\n\nThe `users` table includes an `is_admin` flag to determine administrative privileges, set to `0` by default for regular users. Foreign key constraints are employed to ensure data integrity.\n\n![Database Schema](./demo/db/schema.png)\n\n## Authentication\n\nAuthentication is managed via Laravel Breeze. New users are initialized as teachers with the `is_admin` flag set to `0` by default. Administrative privileges can be granted as needed.\n\n## User Interface Design\n\nThe application features a modern, responsive design powered by Tailwind CSS. Key components include:\n\n### **Dashboard**\n\n![Dashboard](./demo/dashboard.png)\n\n### **Classes CRUD Interfaces**\n\n- **View Page**:  \n  ![Classes View Page](./demo/classes/index.png)  \n  Pagination is implemented for efficient data management.\n\n- **Create Page**:  \n  ![Classes Create Page](./demo/classes/create.png)\n\n- **Update Page**:  \n  ![Classes Update Page](./demo/classes/edit.png)\n\n### **Subjects CRUD Interfaces**\n\n- **View Page**:  \n  ![Subjects View Page](./demo/subjects/index.png)  \n  Pagination streamlines subject data display.\n\n- **Show Page**:  \n  ![Subjects Show Page](./demo/subjects/show.png)\n\n- **Create Page**:  \n  ![Subjects Create Page](./demo/subjects/create.png)\n\n- **Update Page**:  \n  ![Subjects Update Page](./demo/subjects/edit.png)\n\n### **Teachers CRUD Interfaces**\n\n- **View Page**:  \n  ![Teachers View Page](./demo/teachers/index.png)  \n  Pagination ensures effective presentation of teacher records.\n\n- **Show Page**:  \n  ![Teachers Show Page](./demo/teachers/show.png)\n\n- **Create Page**:  \n  ![Teachers Create Page](./demo/teachers/create.png)\n\n- **Update Page**:  \n  ![Teachers Update Page](./demo/teachers/edit.png)\n\n**Note**: Timetable management features are still under development.\n\n---\n\n# Day 2 Report\n### **Updated Dashboard For The Admin**\n- **Dashboard Page**:  \n  ![Dash View Page](./demo/up.png)\n### **Timetables CRUD Interfaces**\n\n- **View Page**:  \n  This dynamic page displays timetables for a specific class or all classes.\n  ![Timetables View Page](./demo/timetables/view.png)\n\n- **Create Page**:  \n  Dynamic form approach for creating timetables.\n  **Part 1**  \n  ![Timetables Create Page](./demo/timetables/b1.png)  \n  **After Selecting Information**  \n  ![Timetables Create Page](./demo/timetables/b2.png)\n\n- **View Page**:  \n  ![Timetables Update Page](./demo/timetables/show.png)\n\n- **Update Page**:  \n  ![Timetables Update Page](./demo/timetables/update.png)\n\n### **Automatic Timetables Generation Interface**\n\n- **View Page**:  \n  ![Automatic Timetables Generation](./demo/autogeneration/generate.png)\n\n- **Error Display Page**:  \n  ![Auto Generation Error](./demo/autogeneration/error.png)  \n  Displayed when auto-generation is not possible.\n\n### **Export Classes Timetables to PDF**\n\n- **Export Button**:  \n  ![Export Classes Timetables to PDF](./demo/pdf/export.png)  \n  Includes a button for exporting class schedules to PDF.\n\n- **PDF Result**:  \n  ![PDF Result](./demo/pdf/pdf.png)  \n  Generated using the `barryvdh/laravel-dompdf` library.\n\n### **Allow Teachers to See Only Their Timetables**\n\n- **Dashboard**:  \n  ![Teacher Timetable Dashboard](./demo/teacher/teacher-timetable.png)\n\n**Note**: An algorithm currently handles timetable scheduling respecting constraints. Future versions may include an AI-based approach for enhanced scheduling.\n\n---\n\n",
+      "languages": {
+        "Blade": 156106,
+        "PHP": 137891,
+        "JavaScript": 1040,
+        "CSS": 59
+      },
+      "url": "https://github.com/AliiAssi/school-management-system",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "automated-eda-platform",
+      "about": "Automated EDA Platform is a user-friendly tool that streamlines the EDA process by delivering detailed statistical summaries, rich visualizations, and insightful reports automatically. It supports efficient data preprocessing, feature analysis, and visualization to help accelerate data-driven decisions.",
+      "description": "Automated EDA Platform is a user-friendly tool that streamlines the EDA process by delivering detailed statistical summaries, rich visualizations, and insightful reports automatically. It supports efficient data preprocessing, feature analysis, and visualization to help accelerate data-driven decisions.",
+      "readme_content": "# Exploratory Data Analysis - Automated EDA Platform\n\nAn automated platform that simplifies Exploratory Data Analysis (EDA) by providing detailed statistical insights, visualizations, and reports with minimal effort. It enhances data preprocessing, visualization, and feature analysis to accelerate data-driven decision-making.\n\n## Features\n\n- 🛠 **Automated Data Report**: Displayed missing values, outliers, and standardizes datasets.\n- 📊 **Comprehensive Visualizations**: Generates histograms, correlation heatmaps, pair plots, etc.\n- 📈 **Statistical Insights**: Computes key statistics like mean, variance, skewness, and more.\n- 🔍 **Feature Engineering Support**: Identifies relationships and interactions between features\n- 🖥️ **Responsive Design**: You can use it from your phone\n- 🏎 **Fast & Scalable**: Designed for efficiency and supports large datasets.\n\n## Installation\n### Prerequisites\nEnsure you have the following installed:\n- Python 3.8+\n- pip package manager\n### Steps to Install\n```bash\ngit clone https://github.com/AliiAssi/Exploratory-Data-Analysis--Automated-EDA--Platform.git\ncd Exploratory-Data-Analysis--Automated-EDA--Platform\npip install -r requirements.txt\ncd my-work\npython run.py \n```\n\n## Demo & Screenshots\n\n### Index EDA Platform Page (where you will import your datasets)\n![Index Page](/Demo/index.png)\n\n### Results Page (where you overview your datasets)\n![Results Page](/Demo/home.png)\n\n### Attribute Description Page (where you deep dive into the attribute)\n![Attribute Page](/Demo/att.png)\n\n### Correlation Analysis Page (where you deep dive into the correlation between attributes)\n![Correlation Page](/Demo/corr.png)\n\n### Feature Selection Analysis Page (where you analyze the feature importance of attributes)\n![Feature Page](/Demo/feature.png)\n\n### Dataset Attributes Distribution Charts Page (where you paginate the charts of the attributes distribution)\n![Feature Page](/Demo/charts.png)\n\n## Useful Links\n- 🚀 [Live Demo](https://aliassi.pythonanywhere.com/)\n\n",
+      "languages": {
+        "HTML": 59245,
+        "Python": 20022,
+        "CSS": 919
+      },
+      "url": "https://github.com/AliiAssi/automated-eda-platform",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "wartime-fake-news-children-analysis",
+      "about": "This project explores the psychological impact of wartime fake news on children through comprehensive data analysis, including sentiment and risk detection. The findings aim to provide deeper insights into how misinformation affects young audiences. The work is part of ongoing research and will be published soon as a formal research paper.",
+      "description": "This project explores the psychological impact of wartime fake news on children through comprehensive data analysis, including sentiment and risk detection. The findings aim to provide deeper insights into how misinformation affects young audiences. The work is part of ongoing research and will be published soon as a formal research paper.",
+      "readme_content": "# wartime-fake-news-children-analysis 📰👧\n\n## Overview\nThis repository contains a collection of Jupyter Notebooks and related data files for analyzing the psychological impact of wartime fake news on children. The analysis leverages data mining, sentiment analysis, and risk detection techniques to better understand how children are affected by wartime misinformation.\n\n## Technology Stack 🛠️\n- Primary Language: Jupyter Notebook (Python)\n- Data Formats: CSV\n- Fonts: Noto Sans Arabic Variable Font (for visualization and text rendering)\n\n## Project Structure\n* Psychological\\_Impact\\_of\\_War\\_News\\_on\\_Children.ipynb.ipynb\n* Q-Analysis.ipynb\n* QA-Data Mining.ipynb\n* QA-Nightmare-Risk-Detection.ipynb\n* QA-Sentiment-Analysis.ipynb\n* qa-data-ar.csv\n* qa-data-eng-analysis.csv\n* NotoSansArabic-VariableFont\\_wdth,wght.ttf\n\n## Installation & Setup\n1. Clone the repository:\n   ```bash\n   git clone https://github.com/AliiAssi/wartime-fake-news-children-analysis.git\n    ```\n2. Open the Jupyter Notebooks in your preferred environment (e.g., Jupyter Lab, VSCode, or Google Colab).\n\n## Usage ▶️\n\n* Each notebook focuses on a specific aspect of the analysis, including data mining, sentiment analysis, and risk detection.\n* CSV files provide the raw datasets for the analyses.\n* The included Arabic font supports proper rendering of Arabic text in visualizations.\n\n## Contributing 🤝\n\nContributions are welcome! Please submit issues or pull requests for improvements, bug fixes, or new features. Make sure to follow coding best practices and include documentation for your changes.\n\n## License\n\nThis project currently does not specify a license. Please contact the repository owner for permission if you wish to use or modify the code.\n\n## Contact\n\nFor questions or further information, please reach out to me via GitHub.\n\n---\n",
+      "languages": {
+        "Jupyter Notebook": 1651489
+      },
+      "url": "https://github.com/AliiAssi/wartime-fake-news-children-analysis",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "rag-chatbot-project",
+      "about": "BONDO2 is a smart chatbot using Retrieval-Augmented Generation (RAG) designed for universities. Upload your own data (CSV, TXT, JSON, PDFs) to create an interactive assistant that improves academic and admin support by retrieving relevant info quickly. It runs on Google Colab with GPU and connects securely via Ngrok.",
+      "description": "BONDO2 is a smart chatbot using Retrieval-Augmented Generation (RAG) designed for universities. Upload your own data (CSV, TXT, JSON, PDFs) to create an interactive assistant that improves academic and admin support by retrieving relevant info quickly. It runs on Google Colab with GPU and connects securely via Ngrok.",
+      "readme_content": "# BONDO2: RAG-based University Chatbot\n\n## Overview\nBONDO2 is a retrieval-augmented generation (RAG) based chatbot designed specifically for universities. It allows you to upload your own data sources (CSV, TXT, or JSON files, PDFs) and create an interactive chatbot that can enhance administrative and academic support through Intelligent Information Retrieval.\n\n\n## How to Use\n\n### Prerequisites\n- Your own data source (CSV, TXT, or JSON files, PDFs)\n- Hugging Face account\n- Ngrok account\n- Google Colab account (for server-side hosting)\n\n## Client Side\nTo run the client side of the project:\n\n1. Navigate to the `/chatbot-client-side` folder.\n2. Follow the README documentation in that folder for detailed setup instructions.\n\n## Server Side\nTo set up and run the server side:\n\n1. Create a new notebook or import the server-side notebook into Google Colab.\n2. **Important**: Make sure to set the runtime type to T4 GPU, not just CPU.\n3. Upload your data files to the Colab environment.\n4. Create a token on Hugging Face:\n   - Sign up/in at: https://huggingface.co/\n   - Generate a new access token from your account settings.\n5. Create a token on Ngrok:\n   - Sign up/in at: https://dashboard.ngrok.com/login\n   - Generate a new authtoken from your dashboard.\n6. Run all cells in the notebook.\n\n## Connection\nThe server-side notebook will provide a public URL via Ngrok that you can use to connect your client application to the RAG backend.\n\n## Data Format\nBONDO2 supports various data formats:\n- CSV files (structured data)\n- TXT files (unstructured text)\n- JSON files (structured data)\n- other formats\n\n## Additional Information\nFor more detailed instructions and troubleshooting, refer to the documentation in both the client and server directories.\n",
+      "languages": {
+        "Jupyter Notebook": 437892,
+        "JavaScript": 30535,
+        "CSS": 522,
+        "HTML": 294
+      },
+      "url": "https://github.com/AliiAssi/rag-chatbot-project",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "cosmetics-system-ai-integration",
+      "about": "An e-commerce platform for cosmetics built in PHP with AI integration capabilities. The system supports user management, product catalogues, order processing, and administrative controls.",
+      "description": "An e-commerce platform for cosmetics built in PHP with AI integration capabilities. The system supports user management, product catalogues, order processing, and administrative controls.",
+      "readme_content": "# Cosmetics System with AI Integration 🤖\n\nAn e-commerce platform for cosmetics built in PHP with AI integration capabilities. The system supports user management, product catalogues, order processing, and administrative controls.\n\n---\n\n## Features ✨\n\n* 👤 User registration, login, and profile management\n* 🛍️ Product browsing and administration\n* 🛒 Shopping cart and order management with status tracking\n* 🛠️ Admin dashboard with user and order management\n* 🔔 Notifications for order updates\n* 🤖 AI integration placeholders for future recommendation and personalization\n\n---\n\n## Technologies Used 🛠️\n\n* PHP\n* MySQL\n* JavaScript\n* HTML/CSS\n* MVC architecture for maintainability\n\n---\n\n## Setup Instructions 🚀\n\n1. 🔄 Clone the repository\n2. ⚙️ Set up PHP and MySQL environment\n3. 📂 Import the provided SQL schema\n4. 🔌 Configure database connection settings\n5. 🌐 Host the project on a web server (e.g., Apache)\n\n---\n\n## Contributions 🤝\n\nContributions are welcome! If you'd like to contribute:\n\n* Fork the repository\n* Create a new branch (`git checkout -b feature-name`)\n* Make your changes and commit (`git commit -m 'Add feature'`)\n* Push to the branch (`git push origin feature-name`)\n* Open a Pull Request\n\nPlease ensure your code follows the project style and includes relevant tests if applicable.\n\n---\n\n## Future Improvements 🚧\n\n* 🤖 AI-powered product recommendations and chat assistant\n* 🎨 UI/UX enhancements\n* 📱 REST API support for mobile clients\n\n---\n",
+      "languages": {
+        "PHP": 253882,
+        "JavaScript": 170982,
+        "CSS": 118778,
+        "Hack": 3427
+      },
+      "url": "https://github.com/AliiAssi/cosmetics-system-ai-integration",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "ai-engineers-program",
+      "about": "A repository for practicing the exercises from this program's courses.",
+      "description": "A repository for practicing the exercises from this program's courses.",
+      "readme_content": "# 🧠 AI Engineers Program\n\nA hands-on, multi-disciplinary repository containing practical exercises, code, and mini-projects from various courses in the AI Engineers Program. This workspace is designed for skill-building in Gen AI, Computer Vision, Deep Learning, MLOps, Reinforcement Learning, and more.\n\n---\n\n## 📚 Overview\n\nThis repository contains:\n\n* Jupyter notebooks, Python scripts, and configuration files\n* Course-based lab work and assignments across ML, DL, CV, GenAI, RL, MLOps\n* Practical demos of modern tools such as YOLO, Hugging Face, Gradio, and RAG pipelines\n* Agentic system prototypes using multi-agent architectures\n\n---\n\n## 🔧 Tech Stack\n\n* **Languages**: Python, Jupyter Notebook\n* **Libraries/Frameworks**: TensorFlow, OpenCV, Scikit-learn, YOLO, Hugging Face Transformers, Gradio\n* **Other Assets**: CSV, PDF, PNG/JPG, MP4, YAML, TOML\n\n---\n\n## 🚀 Quick Start\n\nClone the repository:\n\n```bash\ngit clone https://github.com/AliiAssi/ai-engineers-program.git\ncd ai-engineers-program\n```\n\nOpen notebooks via Jupyter or run scripts directly:\n\n```bash\njupyter notebook\n# or\npython <your_script>.py\n```\n\n---\n\n## 🔍 Sample Topics Covered\n\n* 📌 **Generative AI**: Tool calling, prompt engineering, transformers, embeddings\n* 📌 **Computer Vision**: Image alignment, object detection (YOLO), contour detection\n* 📌 **Deep Learning**: CNNs, TensorFlow basics, custom models\n* 📌 **MLOps**: Pipelines, inference workflows, model packaging\n* 📌 **Reinforcement Learning**: Grid agents, reward loops\n* 📌 **Supervised & Unsupervised Learning**: Clustering, KMeans, Scikit-learn workflows\n\n---\n\n## 💡 Highlights\n\n* 🧠 **Multi-Agent System Prototype** using a crew-like architecture\n* 🔎 **Gradio Chatbot** with LLM-based reasoning\n* 🔧 **YOLO Alarm System** for real-time person detection\n* 📊 **Census RAG Demo** with local document parsing\n* 📈 **Custom Pipelines** with real-world datasets like StackOverflow and US Census\n\n---\n\n## 🤝 Contributing\n\nFeel free to fork, explore, and suggest improvements. PRs and issue reports are always welcome.\n\n---\n",
+      "languages": {
+        "Jupyter Notebook": 19125324,
+        "Python": 21351
+      },
+      "url": "https://github.com/AliiAssi/ai-engineers-program",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "n-queens-ai-visualization",
+      "about": "A web-based visualization of the classic N-Queens problem, built using JavaScript (react-js) to demonstrate how backtracking algorithms solve constraint-based problems in real-time.",
+      "description": "A web-based visualization of the classic N-Queens problem, built using JavaScript (react-js) to demonstrate how backtracking algorithms solve constraint-based problems in real-time.",
+      "readme_content": "# ♛ N-Queens AI Visualization\n\nA web-based visualization of the classic **N-Queens problem**, built using **React-Js** to demonstrate how backtracking algorithms solve constraint-based problems in real-time.\n\n## 🚀 Features\n\n* Interactive N-Queens solver with visual feedback\n* Algorithm implemented in plain JavaScript\n* Lightweight front-end using HTML and CSS\n* Educational and easy to modify\n\n## 🧩 Technologies Used\n\n* JavaScript\n* HTML & CSS\n* React (implied by usage)\n* Visual assets: SVG, PNG\n\n## 🛠 Installation\n\n1. Clone the repository:\n\n   ```bash\n   git clone https://github.com/AliiAssi/n-queens-ai-visualization.git\n   ```\n2. Navigate to the project folder:\n\n   ```bash\n   cd n-queens-ai-visualization\n   ```\n3. Install dependencies:\n\n   ```bash\n   npm install\n   ```\n4. Run the app:\n\n   ```bash\n   npm start\n   ```\n\n## 🤝 Contributing\n\nContributions are welcome! Feel free to open issues or submit pull requests to improve the project.\n\n---\n",
+      "languages": {
+        "JavaScript": 4305,
+        "CSS": 1821,
+        "HTML": 1721
+      },
+      "url": "https://github.com/AliiAssi/n-queens-ai-visualization",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "powerbi-ecommerce-dashboard",
+      "about": "An interactive dashboard built using Power BI for visualizing e-commerce metrics.",
+      "description": "An interactive dashboard built using Power BI for visualizing e-commerce metrics.",
+      "readme_content": "# Power BI E-commerce Dashboard\n\nThis project features an interactive dashboard built using **Microsoft Power BI** to visualize key performance indicators and insights from an e-commerce dataset.\n\n## 📁 Project Files\n\n* `mini-project-2.pbix` – Power BI report file\n* `Dataset - Set de Datos.xlsx` – Source dataset used in the report\n\n## 🚀 Getting Started\n\nTo explore the dashboard:\n      \n1. Download the repository files.\n2. Open the `.pbix` file using **Power BI Desktop**.\n3. Ensure the Excel dataset is located in the same directory or update the data source path within Power BI.\n\n## 📊 Features\n\n* Sales performance analysis\n* Customer segmentation\n* Product category insights\n* Dynamic visualizations and filters\n\n## 🤝 Contributing\n\nContributions are welcome! Feel free to open issues or submit pull requests for enhancements.\n",
+      "languages": {},
+      "url": "https://github.com/AliiAssi/powerbi-ecommerce-dashboard",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "master"
+    },
+    {
+      "name": "langgraph-practice",
+      "about": "A concise learning repository for LangGraph experiments, showcasing structured agent workflows and demonstrations of language model orchestration patterns.",
+      "description": "A concise learning repository for LangGraph experiments, showcasing structured agent workflows and demonstrations of language model orchestration patterns.",
+      "readme_content": "# 🔄 LangGraph Course Practice\n\n![LangGraph Logo](https://miro.medium.com/v2/resize:fit:1400/1*Z1NtI1D-YEGBJfb7bW4MIA.png)\n\n## 📋 Overview\n\nThis repository contains my practice implementations from the LangGraph course, modified to use open-source LLM alternatives instead of the OpenAI API.\n\n> **Note:** While the original course uses the OpenAI API (which requires payment), this implementation uses Llama 3 (via Ollama) and Mistral (via LangChain's API integration) as free/lower-cost alternatives.\n\n## 🧩 Course Modules\n\n### Module 0: Fundamentals\n- Understanding LangGraph core concepts\n- Exploring LangChain basics\n- Learning why LangGraph extends LangChain's capabilities\n\n### Module 1: Introduction to Building with LangGraph\n- Building graph-based workflows\n- Creating sequential action chains\n- Constructing agents with memory systems\n\n## 🤖 LLM Setup\n\nThis implementation uses:\n- **Llama 3** - Running locally via Ollama\n- **Mistral** - Accessed through LangChain's API integration\n\n## 📚 Resources\n\n- [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)\n- [LangChain Documentation](https://python.langchain.com/)\n- [Ollama Documentation](https://ollama.ai/docs)\n\n## 🤝 Contributing\n\nFeel free to fork this repository and submit pull requests with improvements or additional examples using other open-source LLMs.\n",
+      "languages": {
+        "Jupyter Notebook": 743948
+      },
+      "url": "https://github.com/AliiAssi/langgraph-practice",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "main"
+    },
+    {
+      "name": "multimodal-gaming-assistant",
+      "about": "Multimodal AI gaming coach with real-time screen analysis and voice interaction using Google Gemini 2.0 Flash",
+      "description": "Multimodal AI gaming coach with real-time screen analysis and voice interaction using Google Gemini 2.0 Flash",
+      "readme_content": "# AI Gaming Assistant\n\n**Real-time Multimodal Gaming Assistant powered by Google Gemini 2.0 Flash**\n\nA cutting-edge AI-powered gaming assistant that provides intelligent gameplay guidance through live audio and video stream analysis. Built with Flask, Socket.IO, and Google's Gemini 2.0 Flash API, this system delivers contextual coaching and strategic advice across multiple gaming genres with ultra-low latency.\n\n[![Python](https://img.shields.io/badge/python-3.9+-green.svg)](https://python.org)\n[![Flask](https://img.shields.io/badge/flask-latest-red.svg)](https://flask.palletsprojects.com)\n---\n\n## 🌟 Key Features\n\n### 🎯 **Real-time Multimodal Analysis**\n- Simultaneous processing of audio and video streams\n- Live screen capture analysis for game state understanding\n- Contextual AI responses based on visual gameplay elements\n\n### 🎮 **Game-Specific Intelligence**\n- **Chess Analyzer**: Advanced position evaluation, tactical pattern recognition, and hybrid coaching/player modes\n- **Sports Analyzer**: Real-time strategic advice for sports games\n- **Modular Architecture**: Easily extensible for FPS, MOBA, RPG, and other genres\n\n### 🗣️ **Dynamic Voice Interaction**\n- 8 distinct AI voice personalities (Puck, Charon, Kore, Fenrir, Aoede, Leda, Orus, Zephyr)\n- Real-time voice switching during active sessions\n- Context-aware tone adaptation (coaching vs competitive modes)\n\n### ⚡ **Performance Optimized**\n- Average 150ms end-to-end response latency\n- Support for 50+ concurrent gaming sessions\n- Thread-based session isolation for scalability\n- Efficient WebSocket communication pipeline\n\n---\n\n## 🏗️ System Architecture\n\nThe system follows a sophisticated modular architecture designed for high-performance real-time gaming scenarios:\n\n### Core Architecture Principles\n1. **Session Isolation**: Each client runs in dedicated thread with event loop\n2. **Modular Analyzers**: Game-specific analysis modules with dynamic switching\n3. **Async Task Management**: Concurrent handling of audio/video streams\n4. **Real-time Processing**: Optimized for competitive gaming latency requirements\n\n### Communication Pipeline\n```\nClient (Game Stream) → WebRTC → Flask Backend → Gemini 2.0 Flash API → Socket.IO → Client (AI Response)\n```\n\n---\n\n## 📁 Project Structure\n\n\n```\napp/\n├── __init__.py              # Flask app factory\n├── config.py               # Configuration management\n├── analysis/               # Game-specific analysis modules\n│   ├── chess.py           # Chess game analysis\n│   ├── sports.py          # Sports game analysis\n│   └── __init__.py\n├── gemini/                # Gemini AI integration\n│   ├── client.py          # Gemini API client\n│   ├── session.py         # AI session management\n│   ├── prompts.py         # Prompt templates\n│   ├── gemini_config.py   # AI configuration\n│   ├── stream_tasks.py    # Streaming task management\n│   ├── session_cleanup.py # Session cleanup utilities\n│   └── available_analyzers.py # Available analysis modules\n├── routes/                # HTTP route handlers\n│   ├── main.py           # Main application routes\n│   └── __init__.py\n├── socket/               # WebSocket event handlers\n│   ├── events.py         # Socket.IO event definitions\n│   ├── manager.py        # Socket connection management\n│   └── __init__.py\n├── static/              # Frontend assets\n│   ├── css/            # Stylesheets\n│   └── js/             # JavaScript modules\n└── templates/          # Jinja2 templates\n    ├── index.html      # Main application template\n    └── components/     # Reusable template components\n```\n\n## 🚀 Quick Start\n\n### Prerequisites\n- Python 3.9 or higher\n- Google Cloud Platform account with Gemini API access\n- Modern web browser with WebRTC support\n\n### 1. Clone & Setup Environment\n\n```bash\ngit clone https://github.com/larawehbe/ai-gaming.git\ncd ai-gaming\npython -m venv venv\nsource venv/bin/activate  # Windows: venv\\Scripts\\activate\npip install -r requirements.txt\n```\n\n### 2. Configure Environment Variables\n\nCreate a `.env` file in the project root:\n\n```env\nGOOGLE_API_KEY=your_gemini_api_key_here\nSECRET_KEY=your_secret_key\nMODEL=gemini-2.0-flash-exp\nSUGGESTION_INTERVAL=30\n```\n\n### 3. Launch the Application\n\n```bash\npython run.py\n```\n\nNavigate to `http://localhost:5000` to start your AI gaming session.\n\n---\n\n## 🎮 Game-Specific Features\n\n### Chess Assistant\n- **Hybrid Role Architecture**: Intelligent routing between COACH (default) and PLAYER modes\n- **FEN Position Extraction**: Computer vision-based board state analysis\n- **Knowledge Base Integration**: Enhanced with Chess.com strategic principles\n- **Safety Verification**: Piece movement validation to prevent illegal suggestions\n- **Educational Focus**: Develops player skills through guided thinking\n\n### Sports Analyzer\n- **Game Context Analysis**: Real-time situation assessment\n- **Tactical Coaching**: Strategic advice for sports gameplay\n- **Fast-Paced Optimization**: Streamlined analysis for quick decision-making\n\n---\n\n## 🔧 Advanced Configuration\n\n### WebSocket Events\n\n#### Client → Server\n| Event | Purpose | Description |\n|-------|---------|-------------|\n| `connect` | Connection | Establishes WebSocket connection |\n| `setup` | Initialization | Initializes new gaming session |\n| `message` | Data Stream | Sends audio/video data to AI |\n| `voice_name` | Voice Control | Changes AI voice dynamically |\n| `analyzer_index` | Analyzer Switch | Switches game analyzer |\n\n#### Server → Client\n| Event | Purpose | Description |\n|-------|---------|-------------|\n| `message` | AI Response | Delivers AI coaching responses |\n| `status` | System Status | Provides system status updates |\n| `error` | Error Handling | Sends error notifications |\n\n### Available AI Voices\n```python\nVOICES = [\n    \"Puck\",     # Playful and energetic\n    \"Charon\",   # Deep and authoritative  \n    \"Kore\",     # Calm and analytical\n    \"Fenrir\",   # Intense and focused\n    \"Aoede\",    # Musical and encouraging\n    \"Leda\",     # Gentle and supportive\n    \"Orus\",     # Wise and strategic\n    \"Zephyr\"    # Light and quick\n]\n```\n\n---\n\n## 🚀 Deployment\n\n### Development\n```bash\npython run.py\n# Runs on http://localhost:5000\n```\n\n### Production Checklist\n- ✅ Set production API keys and secrets\n- ✅ Configure HTTPS/WSS for secure WebSocket communication\n- ✅ Implement process management (PM2/systemd)\n- ✅ Monitor resource usage for concurrent sessions\n- ✅ Set up logging and error recovery\n- ✅ Configure load balancing for horizontal scaling\n\n### Docker Deployment\n```bash\ndocker build -t ai-gaming-assistant .\ndocker run -p 5000:5000 --env-file .env ai-gaming-assistant\n```\n\n---\n\n## 🧪 Testing & Performance\n\n### Performance Metrics\n- **Concurrent Users**: Successfully tested with 50+ simultaneous sessions\n- **Response Latency**: Average 150ms end-to-end response time\n- **Cross-Genre Consistency**: Maintained coherent persona across game types\n- **Memory Efficiency**: Optimized session cleanup prevents memory leaks\n\n### Testing Strategy\n- **Integration Tests**: WebSocket communication flow validation\n- **Load Tests**: Concurrent session handling capacity\n- **Manual Tests**: Real-world gaming scenario validation\n- **Performance Tests**: Response latency and resource monitoring\n\n---\n\n## 🛠️ Development Guidelines\n\n### Adding New Game Analyzers\n\n1. Create analyzer class in `app/analysis/`:\n```python\nclass NewGameAnalyzer:\n    def __init__(self, session):\n        self.session = session\n    \n    def send_periodic_analysis(self, image_data):\n        # Implement game-specific analysis\n        pass\n```\n\n2. Add to `AVAILABLE_ANALYZERS` in `available_analyzers.py`\n3. Create prompts in `prompts.py`\n4. Test with real gameplay scenarios\n\n### Prompt Engineering Best Practices\n- **Concise Responses**: Single-sentence format for rapid comprehension\n- **Context Integration**: Leverage game state awareness\n- **Educational Value**: Prioritize learning over direct answers\n- **Reliability Testing**: Extensive validation across scenarios\n\n---\n\n## 🔍 Troubleshooting\n\n### Common Issues\n\n**Session Not Starting**\n- Verify `GOOGLE_API_KEY` is correctly set\n- Check Gemini API quota and billing status\n- Ensure `setup` event is sent after WebSocket connection\n\n**High Memory Usage**\n- Confirm sessions are properly cleaned up on disconnect\n- Monitor image data accumulation\n- Check thread creation and cleanup processes\n\n**Audio/Video Sync Issues**\n- Verify WebRTC compatibility in browser\n- Check network stability and bandwidth\n- Monitor timestamp correlation system\n\n---\n\n## 🤝 Contributing\n\nWe welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:\n- Code style and standards\n- Testing requirements\n- Pull request process\n- Issue reporting\n\n---\n\n## 📊 Technical Innovations\n\n### Prompt Engineering Framework\nAdvanced prompt optimization with focus on reliability and educational value through extensive iterative testing and coaching-first methodologies.\n\n### Multimodal Data Synchronization\nSophisticated timestamp-based correlation system ensuring temporal alignment of audio and video inputs for accurate analysis.\n\n### Static Persona Modulation\nPersonality Selection system that adjusts coaching style based on gameplay scenarios and user skill level.\n\n---\n\n## 🔮 Future Roadmap\n\n### Immediate Enhancements\n- Redis integration for distributed session management\n- Additional gaming genres (RTS, Racing, Puzzle games)\n- Enhanced natural language query processing\n\n### Long-term Vision\n- Machine learning pipeline for personalized gaming advice\n- Streaming platform integration (Twitch, YouTube Gaming)\n- Multi-language support for global gaming communities\n- Advanced analytics dashboard for gameplay improvement tracking\n\n---\n\n## 👨‍💻 Developer\n\n**Ali Assi**  \n*Data scientist and Web Developer*\n\n- **Repository**: [GitHub](https://github.com/AliiAssi/)\n\n---\n\n## 🙏 Acknowledgments\n\n- Google Gemini team for the powerful 2.0 Flash API\n- Chess.com for educational content integration\n- Open source community for Flask and Socket.IO frameworks\n- Beta testers and gaming community feedback\n\n---\n\n<div align=\"center\">\n\n**Ready to elevate your gaming experience?**  \n[Get Started](https://github.com/larawehbe/ai-gaming)\n\n*Built with ❤️ for gamers, by gamers*\n\n</div>",
+      "languages": {
+        "Python": 37625,
+        "CSS": 22358,
+        "JavaScript": 17387,
+        "HTML": 8517,
+        "Dockerfile": 386
+      },
+      "url": "https://github.com/AliiAssi/multimodal-gaming-assistant",
+      "stars": 0,
+      "forks": 0,
+      "is_fork": false,
+      "default_branch": "dev"
+    }
+  ],
+  "statistics": {
+    "total_repositories": 23,
+    "repositories_with_readme": 22,
+    "total_stars": 0,
+    "total_forks": 0,
+    "unique_languages": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Dockerfile",
+      "PHP",
+      "Hack",
+      "Blade",
+      "SCSS",
+      "Java",
+      "Batchfile",
+      "Jupyter Notebook"
+    ],
+    "language_distribution": {
+      "Python": 172802,
+      "JavaScript": 2504189,
+      "CSS": 1140792,
+      "HTML": 811202,
+      "Dockerfile": 1247,
+      "PHP": 15552679,
+      "Hack": 15637,
+      "Blade": 499842,
+      "SCSS": 162077,
+      "Java": 276326,
+      "Batchfile": 1055,
+      "Jupyter Notebook": 21958653
+    }
+  },
+  "metadata": {
+    "scraped_at": "2025-06-25T19:42:32.070018",
+    "scraper_version": "1.0.0",
+    "total_api_requests": 57,
+    "saved_to_file": null,
+    "save_error": null
+  }
+}
